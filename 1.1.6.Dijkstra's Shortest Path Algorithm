@@ -1,0 +1,77 @@
+/*#include <limits.h> 
+    }
+}
+
+int main() {
+    int G[MAX][MAX];
+    int n, edges, i, j;
+    int u, v, w, startnode;
+
+    printf("Enter the number of vertices : ");
+    if (scanf("%d", &n) != 1) return 0;
+    
+    printf("Enter the number of edges : ");
+    if (scanf("%d", &edges) != 1) return 0;
+
+    // Initialize the adjacency matrix with INF defaults
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= n; j++) {
+            G[i][j] = INF;
+        }
+    }
+
+    // Populate edges according to structural user inputs
+    for (i = 0; i < edges; i++) {
+        printf("Enter source : ");
+        scanf("%d", &u);
+        printf("Enter destination : ");
+        scanf("%d", &v);
+        printf("Enter weight : ");
+        scanf("%d", &w);
+        G[u][v] = w;
+    }
+
+    printf("Enter the source :");
+    scanf("%d", &startnode);
+
+    // Execute core computation and print formatted results
+    dijkstra(G, n, startnode);
+
+    return 0;
+}
+
+
+	// write your code here
+/*	
+}
+int main() { 
+	int s, d, w, i, j;
+	printf("Enter the number of vertices : ");
+	scanf("%d", &V);
+	printf("Enter the number of edges : ");
+	scanf("%d", &E);
+	for(i = 1 ; i <= V; i++) {
+		for(j = 1; j <= V; j++) {
+			graph[i][i] = 0;
+		}
+	}
+	for(i = 1; i <= E; i++) {
+		printf("Enter source : ");
+		scanf("%d", &s);
+		printf("Enter destination : ");
+		scanf("%d", &d);
+		printf("Enter weight : ");
+		scanf("%d", &w);
+		if(s > V || d > V || s <= 0 || d <= 0) {
+			printf("Invalid index. Try again.\n");
+			i--;
+			continue;
+		} else {
+			graph[s][d] = w;
+		}
+	}
+	printf("Enter the source :");
+	scanf("%d", &s);
+	dijkstra(graph, V, s); 
+	return 0; 
+} */
